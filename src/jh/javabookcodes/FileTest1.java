@@ -9,6 +9,7 @@ public class FileTest1 {
     // 2. FileTest1 예제가 수행하는 기능이 무엇인지?
     // 예) file이 디렉토리 인지 아닌지?를 검사하는 구현이 들어있다. 어디에?
     // 그외 여러가지...
+    //왜 untitled가 뜨지
 
     public static class ImageNameFilter implements FilenameFilter {
         public boolean accept(File dir, String name) {
