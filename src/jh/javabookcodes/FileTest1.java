@@ -18,6 +18,7 @@ public class FileTest1 {
     }
 
     public static void main(String[] args) {
+
         System.out.println("c:드라이브의 전체 파일 출력");
         File file = new File("C:\\");//c:드라이브 경로를 이용해 파일 객체 생성
         String[]files = file.list();//c:드라이브 안에 존재하는 모든 디렉토리 파일을 String[]타입으로 불러오기
