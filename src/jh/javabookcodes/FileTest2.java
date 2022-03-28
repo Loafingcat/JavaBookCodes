@@ -49,6 +49,12 @@ public class FileTest2 {
         int fileCount = file.list().length;
         int intValue = Integer.parseInt(input);
         String[] files = file.list();
+        // 1. 정규식 패턴을 써서 입력받은 문자열에 숫자만 있는지를 검사. (문자가 들어가면 false)
+        boolean hasOnlyNumberInString = input.matches("[0-9]+");
+        System.out.println("숫자만 있는 input인가 아닌가?" + hasOnlyNumberInString);
+        // 2. 파일 존재하지 않는 숫자를 입력 받았을 경우 종료
+        // ????오똑하징?
+
 
 
         if (intValue > fileCount) {
