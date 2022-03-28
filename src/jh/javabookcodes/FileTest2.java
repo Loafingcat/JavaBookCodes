@@ -27,12 +27,12 @@ public class FileTest2 {
 
         if (input.matches("[a-zA-Z]")) {
             System.out.print("출력: ");
-            System.out.println("정수를 입력해주세요.");
+            System.out.println("1~10 사이의 숫자만 입력하세요.");
             System.out.println("종료.");
             System.exit(0);
         } else if (!input.matches("[1-9]|10")) {
             System.out.print("출력: ");
-            System.out.println("1~10 사이의 정수를 입력하세요.");
+            System.out.println("1~10 사이의 숫자만 입력하세요.");
             System.out.println("종료.");
             System.exit(0);
         }
