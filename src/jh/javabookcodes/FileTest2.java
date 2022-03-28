@@ -1,7 +1,10 @@
 package jh.javabookcodes;
 
 import java.io.File;
+import java.io.IOException;
+import java.nio.file.Files;
 import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.Scanner;
 import java.util.stream.Stream;
 
@@ -43,13 +46,14 @@ public class FileTest2 {
         System.out.print("파일이름 입력: ");
         String input = (new Scanner(System.in)).nextLine();
         File file = new File("C:\\TEST\\TEST");
+        int fileCount = file.list().length;
+        int intValue = Integer.parseInt(input);
         String[] files = file.list();
 
 
-
-        if (!input.matches("[1-9]|10")) {
+        if (intValue > fileCount) {
             System.out.print("출력: ");
-            System.out.println("1~10사이의 숫자만 입력하세요.");
+            System.out.println("1~" + fileCount +"사이의 숫자만 입력하세요.");
             System.out.println("종료.");
             System.exit(0);
         }
