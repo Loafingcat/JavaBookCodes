@@ -1,7 +1,9 @@
 package jh.javabookcodes;
 
 import java.io.File;
+import java.nio.file.Path;
 import java.util.Scanner;
+import java.util.stream.Stream;
 
 
 public class FileTest2 {
@@ -25,14 +27,11 @@ public class FileTest2 {
         File file = new File("C:\\TEST\\TEST");
         String[] files = file.list();
 
-        if (input.matches("[a-zA-Z]")) {
+
+
+        if (!input.matches("[1-9]|10")) {
             System.out.print("출력: ");
-            System.out.println("1~10 사이의 숫자만 입력하세요.");
-            System.out.println("종료.");
-            System.exit(0);
-        } else if (!input.matches("[1-9]|10")) {
-            System.out.print("출력: ");
-            System.out.println("1~10 사이의 숫자만 입력하세요.");
+            System.out.println("1~10사이의 숫자만 입력하세요.");
             System.out.println("종료.");
             System.exit(0);
         }
