@@ -18,6 +18,24 @@ public class FileTest2 {
      * 파일이름이 쭉쭉 돌면서 비교를 하면서 이름이 일치하지 않는 경우에만 브레이크가 걸려야 하는데 왜 그렇지 않지?
      * filename이랑 fn을 비교할게 아니라 fn이랑 다른걸 비교해야 될듯?
      * */
+
+    /*
+    * NEXT 문제 :
+    * Test/ 디렉토리 안에 존재하는 파일의 갯수에 따라서, 파일의 정보를 출력.
+    * 파일이 3개면
+    * TEST1.txt
+    * TEST2.txt
+    * TEST3.txt
+    *
+    * 파일이 2개면
+    * TEST1.txt
+    * TEST2.txt
+    *
+    * 인것처럼 파일 갯수 N개에 따라서 TEST1, TEST2, ...순차적으로 TESTN.txt까지 존재함.
+    *
+    * 이걸 입력받아 파일 번호와 다른 입력을 받으면 종료.
+    * 아니면 파일 정보를 출력.
+    * */
     public static void main(String[] args) {
 
         System.out.print("파일이름 입력: ");
