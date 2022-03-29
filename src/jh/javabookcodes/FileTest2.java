@@ -46,9 +46,9 @@ public class FileTest2 {
         System.out.print("파일이름 입력: ");
         String input = (new Scanner(System.in)).nextLine();
         File file = new File("C:\\TEST\\TEST");
+        String[] files = file.list();
         int fileCount = file.list().length;
         int intValue = Integer.parseInt(input);
-        String[] files = file.list();
 
 
         if (intValue > fileCount) {
