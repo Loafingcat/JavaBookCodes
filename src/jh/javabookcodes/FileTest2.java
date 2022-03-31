@@ -1,12 +1,7 @@
 package jh.javabookcodes;
 
 import java.io.File;
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.util.Scanner;
-import java.util.stream.Stream;
 
 
 public class FileTest2 {
@@ -25,45 +20,43 @@ public class FileTest2 {
      * */
 
     /*
-    * NEXT 문제 :
-    * Test/ 디렉토리 안에 존재하는 파일의 갯수에 따라서, 파일의 정보를 출력.
-    * 파일이 3개면
-    * TEST1.txt
-    * TEST2.txt
-    * TEST3.txt
-    *
-    * 파일이 2개면
-    * TEST1.txt
-    * TEST2.txt
-    *
-    * 인것처럼 파일 갯수 N개에 따라서 TEST1, TEST2, ...순차적으로 TESTN.txt까지 존재함.
-    *
-    * 이걸 입력받아 파일 번호와 다른 입력을 받으면 종료.
-    * 아니면 파일 정보를 출력.
-    * */
+     * NEXT 문제 :
+     * Test/ 디렉토리 안에 존재하는 파일의 갯수에 따라서, 파일의 정보를 출력.
+     * 파일이 3개면
+     * TEST1.txt
+     * TEST2.txt
+     * TEST3.txt
+     *
+     * 파일이 2개면
+     * TEST1.txt
+     * TEST2.txt
+     *
+     * 인것처럼 파일 갯수 N개에 따라서 TEST1, TEST2, ...순차적으로 TESTN.txt까지 존재함.
+     *
+     * 이걸 입력받아 파일 번호와 다른 입력을 받으면 종료.
+     * 아니면 파일 정보를 출력.
+     * */
     public static void main(String[] args) {
 
         System.out.print("파일이름 입력: ");
         String input = (new Scanner(System.in)).nextLine();
         File file = new File("C:\\TEST\\TEST");
         String[] files = file.list();
-        int fileCount = file.list().length;
-        int inputValue = Integer.parseInt(input);
+        int newint = Integer.parseInt(input);
+        int fileCount = files.length;
 
         // 1. 정규식 패턴을 써서 입력받은 문자열에 숫자만 있는지를 검사. (문자가 들어가면 false)
         boolean hasOnlyNumberInString = input.matches("[0-9]+");
         System.out.println("숫자만 있는 input인가 아닌가?" + hasOnlyNumberInString);
         // 2. 파일 존재하지 않는 숫자를 입력 받았을 경우 종료
-        if (inputValue > fileCount) {
+        if (newint > fileCount) {
             System.out.println("파일이 존재하지 않습니다.");
+            System.out.println("종료.");
             System.exit(0);
         }
 
-
-
-         for (String filename : files) {//files를 filename으로 정의
+        for (String filename : files) {//files를 filename으로 정의
             String fn = input;//input값을 fn으로 정의
-
 
             if (filename.contains(fn)) {//filename에 fn을 포함하고 있다면
                 File subFile = new File(file, filename);//file과 filename을 subfile로 새로 생성 파일 경로?
@@ -73,7 +66,6 @@ public class FileTest2 {
         }
     }
 }
-
 
 
 
