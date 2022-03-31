@@ -37,10 +37,22 @@ public class FileTest2 {
      * 이걸 입력받아 파일 번호와 다른 입력을 받으면 종료.
      * 아니면 파일 정보를 출력.
      * */
+
+    /*
+    * 숙제
+    * 1. 잘못 입력받으면, "다시 입력하세요" 출력 후 종료처리 하지 않고 다시 입력 받을 수 있도록 만들기.
+    * 2. Java책 Chapter 5 클래스 기본 - 변수와 메소드 정의하기
+    * 부터
+    * Chapter 6 클래스 고급 - 변수와 메소드 상속받아 정의하기
+    * 예제 따라 쳐서 push하기
+    *
+    * 월요일이 되면
+    * Chapter 5 or Chapter 6 에 나온 예제 들 중 하나 or 몇개를 골라
+    * 왜 이렇게 돌아가는지에 대해 물어볼것임. 나름 설명하면 됨.
+    * 할수있는만큼 하되, Chapter 5부터 나오는 예제 순차적으로 할것.
+    * */
     public static void main(String[] args) {
-
         try {
-
             System.out.print("파일이름 입력: ");
             String input = (new Scanner(System.in)).nextLine();
             File file = new File("C:\\TEST\\TEST");
