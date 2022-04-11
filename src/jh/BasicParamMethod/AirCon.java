@@ -1,6 +1,6 @@
 package jh.BasicParamMethod;
 
-public class BasicParamMethod { //클래스 이름 정의
+public class AirCon { //클래스 이름 정의
 
     //변수 정의 6~10라인 모델링 단계에서 특성으로 도출한 단위들이 클래스를 정의하며 변수 단위가 됨.
     String company;
